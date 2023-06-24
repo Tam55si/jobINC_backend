@@ -1,0 +1,102 @@
+// router.get("/", async (req, res) => {
+//     try {
+//         const response = await JobModel.find({});
+//         res.json(response);
+//     } catch (err) {
+//         res.json(err);
+//     }
+// });
+
+//post a job
+// router.post("/", async (req, res) => {
+//     const job = new JobModel(req.body);
+//     try {
+//         const response = await job.save();
+//         res.json(response);
+//     } catch (err) {
+//         res.json(err);
+//     }
+// });
+
+//view a job 
+// router.get("/:id", async (req, res) => {
+//     const id = req.params.id;
+//     let response;
+//     try {
+
+//         response = await JobModel.findById(id);
+
+//     } catch (err) {
+//         console.log(err);
+//     }
+//     return res.status(200).json({ response });
+// });
+
+
+
+//apply for a job
+// router.put("/", async (req, res) => {
+//     const job = await JobModel.findById(req.body.jobId)
+//     try {
+//         const job = await JobModel.findById(req.body.jobID);
+//         const user = await UserModel.findById(req.body.userID);
+//         user.appliedJobs.push(job);
+//         await user.save();
+//         res.json({ appliedJobs: user.appliedJobs });
+//     } catch (err) {
+//         res.json(err);
+//     }
+// });
+
+//see all applied jobs
+// router.put("/", async (req, res) => {
+//     const job = await JobModel.findById(req.body.jobId)
+//     try {
+//         const job = await JobModel.findById(req.body.jobID);
+//         const user = await UserModel.findById(req.body.userID);
+//         user.appliedJobs.push(job);
+//         await user.save();
+//         res.json({ appliedJobs: user.appliedJobs });
+//     } catch (err) {
+//         res.json(err);
+//     }
+// });
+
+//To see a job saved by any specific user
+// by id
+// router.get("/appliedJobs/ids/:userID", async (req, res) => {
+//     try {
+//         const user = await UserModel.findById(req.params.userID);
+//         res.json({ appliedJobs: user?.appliedJobs });
+//     } catch (err) {
+//         res.json(err);
+//     }
+// });
+
+//Get saved jobs
+// router.get("/appliedJobs/:userID", async (req, res) => {
+//     try {
+//         const appliedJobs = await JobModel.find({
+//             _id: { $in: user.appliedJobs },
+//         });
+//         const user = await UserModel.findById(req.params.userID);
+//         res.json({ appliedJobs });
+//     } catch (err) {
+//         res.json(err);
+//     }
+// });
+
+//delete jobs
+
+// router.delete("/:id", async (req, res) => {
+//     try {
+//         const { id } = req.params;
+
+//         const deletejob = await JobModel.findByIdAndDelete({ _id: id })
+//         console.log(deletejob);
+//         res.status(201).json(deletejob);
+
+//     } catch (error) {
+//         res.status(422).json(error);
+//     }
+// })
