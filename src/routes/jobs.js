@@ -1,9 +1,7 @@
 import express from 'express';
-import mongoose from 'mongoose';
-import { JobModel } from "../models/Jobs.js";
-import { UserModel } from "../models/Users.js";
-import { verifyToken } from "./users.js";
-import { useCookies } from 'react-cookie';
+
+
+
 import { getAllJobs, getJobById, addJob, updateJob, deleteJob, applyJob, appliedIdJob, allAppliedJobs, searchJob } from '../controllers/jobsController.js';
 
 const router = express.Router();
